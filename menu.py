@@ -1,10 +1,12 @@
 # this file needs to contain a single function, called "menu"
 # that function will get a list of strings
 
-def menu(strings):
+def menu(strings):                  # start the function definition
+
+    # ask the user to enter a string from "strings", a list we got from the caller
     user_choice = input(f'Enter one of {strings}').strip()
     
-    if user_choice in strings:
-        return user_choice
+    if user_choice in strings:    # if the user's choice (a string) is an element of strings, that means
+        return user_choice        # we got ligitimate input, and we can return it as output
 
-    return ''  
+    return ''                     # if the user's input is illegal, then we'll return the empty string
